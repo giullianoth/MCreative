@@ -35,6 +35,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   color: #7A7A7A;
   scroll-behavior: smooth;
 }
@@ -62,15 +63,62 @@ body button {
 body a {
   text-decoration: none;
   color: #FF1090;
+  transition: all 0.3s ease 0s;
+}
+body ul li {
+  list-style: none;
+}
+body img {
+  width: 100%;
 }
 body .mm_btn {
   background-color: #FF1090;
   color: #FFF;
-  padding: 8px 20px;
+  padding: 10px 22px;
   display: inline-block;
   border: none;
   cursor: pointer;
   border-radius: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
+  transition: all 0.3s ease 0s;
+}
+body .mm_btn i {
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* HEADER */
+.mm_header {
+  width: 100%;
+  background-color: #530685;
+  padding: 10px 0;
+}
+.mm_header_content {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.mm_header_content_logo_title {
+  display: none;
+}
+.mm_header_content_logo_image img {
+  width: 210px;
+}
+.mm_header_content_nav_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+.mm_header_content_nav_menu_item a {
+  color: #FFF;
+}
+.mm_header_content_nav_menu_item a:hover {
+  color: #E3A2CC;
 }/*# sourceMappingURL=style.css.map */

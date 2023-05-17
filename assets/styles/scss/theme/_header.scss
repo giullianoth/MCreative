@@ -1,0 +1,42 @@
+/* HEADER */
+@include theme() {
+    &_header {
+        @include fullWidthContainer;
+        background-color: $color-indigo;
+        padding: 10px 0;
+
+        &_content {
+            @include maxWidthContainer;
+            @include flex(space-between, center, nowrap);
+
+            &_logo {
+                &_title {
+                    display: none;
+                }
+
+                &_image {
+                    img {
+                        width: 210px;
+                    }
+                }
+            }
+
+            &_nav {
+                &_menu {
+                    @include flex;
+                    column-gap: 30px;
+
+                    &_item {
+                        a {
+                            color: $color-white;
+
+                            &:hover {
+                                color: $color-lavender-pink;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

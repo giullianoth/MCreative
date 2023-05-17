@@ -56,6 +56,21 @@
     }
 }
 
+// CONTAINER
+@mixin fullWidthContainer($fillScreen: false) {
+    width: 100%;
+
+    @if $fillScreen == true {
+        height: 100%;
+    }
+}
+
+@mixin maxWidthContainer($maxWidth: $container-max-width-default, $paddingY: $container-padding-y, $paddingX: $container-padding-x) {
+    max-width: $maxWidth;
+    padding: $paddingY $paddingX;
+    margin: 0 auto;
+}
+
 // BROWSER CORES ATTRIBUTES
 @mixin setBrowserCores($attr, $value, $cores: $browser-cores-default) {
     #{$attr}: #{$value};
@@ -68,4 +83,43 @@
 // BORDER RADIUS
 @mixin borderRadius($radius: $radius-default) {
     @include setBrowserCores(border-radius, $radius);
+}
+
+// FLEXBOX
+@mixin flex($justifyContent: center, $alignitems: center, $flexWrap: wrap) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignitems;
+    flex-wrap: $flexWrap;
+}
+
+@mixin flexBasis($basis, $gap: 0) {
+    @if $gap !=0 {
+        flex-basis: calc($basis - $gap);
+    }
+
+    @else {
+        flex-basis: $basis;
+    }
+}
+
+@mixin flex1($gap: 0) {
+    @include flexBasis(100%, $gap);
+}
+
+@mixin flex2($gap: 0) {
+    @include flexBasis(calc(100% / 2), $gap);
+}
+
+@mixin flex3($gap: 0) {
+    @include flexBasis(calc(100% / 3), $gap);
+}
+
+@mixin flex4($gap: 0) {
+    @include flexBasis(calc(100% / 4), $gap);
+}
+
+// TRANSITIONS AND ANIMATIONS
+@mixin transition($property: all, $duration: $transition-duration-default, $timingFunction: ease, $delay: 0s) {
+    transition: $property $duration $timingFunction $delay;
 }

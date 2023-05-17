@@ -7,6 +7,7 @@
 
 body {
     font-family: $font-montserrat;
+    font-weight: 500;
     color: $color-gray;
     scroll-behavior: smooth;
 
@@ -37,6 +38,17 @@ body {
     a {
         text-decoration: none;
         color: $color-magenta;
+        @include transition;
+    }
+
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+
+    img {
+        width:100%;
     }
 
     @include theme() {
@@ -44,12 +56,18 @@ body {
             background-color: $color-magenta;
             color: $color-white;
 
-            padding: 8px 20px;
+            padding: 10px 22px;
             display: inline-block;
             border: none;
             cursor: pointer;
             
             @include borderRadius($radius-big);
+            @include transition;
+
+            i {
+                vertical-align: middle;
+                margin-left: 6px;
+            }
         }
     }
 }

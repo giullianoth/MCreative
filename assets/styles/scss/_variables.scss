@@ -26,5 +26,13 @@ $font-size-big: 1.2rem;
 $radius-default: 10px;
 $radius-big: 30px;
 
+// CONTAINER MAX WIDTH
+$container-max-width-default: 1140px;
+$container-padding-y: 0;
+$container-padding-x: 20px;
+
+// TRANSITIONS AND ANIMATIONS
+$transition-duration-default: 0.3s;
+
 // BROWSER CORES
 $browser-cores-default: ("moz", "webkit");
