@@ -1,0 +1,71 @@
+// THEME
+@mixin theme() {
+    .mm {
+        @content;
+    }
+}
+
+// OFFLINE FONTS
+@mixin setFonts($presets) {
+
+    $weight: ();
+    $family: ();
+    $files: ();
+    $path: ();
+    $format: ();
+
+    @each $attr, $values in $presets {
+
+        @if $attr == "weights" {
+            @for $w from 1 through length($list: $values) {
+                $weight: append($list: $weight, $val: nth($list: $values, $n: $w), $separator: comma);
+            }
+        }
+
+        @if $attr == "family" {
+            @for $f from 1 through length($list: $weight) {
+                $family: append($list: $family, $val: $values, $separator: comma);
+            }
+        }
+
+        @if $attr == "files" {
+            @for $fl from 1 through length($list: $weight) {
+                $files: append($list: $files, $val: nth($list: $values, $n: $fl), $separator: comma);
+            }
+        }
+
+        @if $attr == "path" {
+            @for $p from 1 through length($list: $weight) {
+                $path: append($list: $path, $val: "#{$font-path}/#{$values}/#{nth($list: $files, $n: $p)}", $separator: comma);
+            }
+        }
+
+        @if $attr == "format" {
+            @for $fm from 1 through length($list: $weight) {
+                $format: append($list: $format, $val: $values, $separator: comma);
+            }
+        }
+    }
+
+    @for $font from 1 through length($list: $weight) {
+        @font-face {
+            font-family: nth($list: $family, $n: $font);
+            src: url(nth($list: $path, $n: $font)) format(nth($list: $format, $n: $font));
+            font-weight: nth($list: $weight, $n: $font);
+        }
+    }
+}
+
+// BROWSER CORES ATTRIBUTES
+@mixin setBrowserCores($attr, $value, $cores: $browser-cores-default) {
+    #{$attr}: #{$value};
+
+    @each $core in $cores {
+        -#{$core}-#{$attr}: #{$value};
+    }
+}
+
+// BORDER RADIUS
+@mixin borderRadius($radius: $radius-default) {
+    @include setBrowserCores(border-radius, $radius);
+}

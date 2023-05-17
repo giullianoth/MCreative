@@ -1,0 +1,55 @@
+/* BOOT CONFIG */
+* {
+    margin: 0;
+    padding: 0;
+    @include setBrowserCores(box-sizing, border-box);
+}
+
+body {
+    font-family: $font-montserrat;
+    color: $color-gray;
+    scroll-behavior: smooth;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-indigo;
+        font-family: $font-brother-1816;
+        font-weight: 800;
+    }
+
+    label {
+        color: $color-onyx;
+    }
+
+    input[type=text], input[type=password], input[type=email], textarea {
+        @include borderRadius($radius-big);
+
+        border: 1px solid $color-silver;
+        font-family: $font-montserrat;
+        font-size: $font-size-small;
+        color: $color-gray;
+        padding: 10px 16px;
+    }
+
+    button {
+        font-family: $font-montserrat;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-magenta;
+    }
+
+    @include theme() {
+        &_btn {
+            background-color: $color-magenta;
+            color: $color-white;
+
+            padding: 8px 20px;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            
+            @include borderRadius($radius-big);
+        }
+    }
+}

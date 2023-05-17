@@ -1,0 +1,11 @@
+// MONTSERRAT
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// BROTHER 1816
+@include setFonts((
+    weights: (100, 300, 500, 800, 900),
+    family: $font-brother-1816,
+    files: ("Brother1816-Thin.ttf", "Brother1816-Light.ttf", "Brother1816-Medium.ttf", "Brother1816-ExtraBold.ttf", "Brother1816-Black.ttf"),
+    path: ("Brother1816"),
+    format: ("truetype")
+));
