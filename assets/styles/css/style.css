@@ -91,6 +91,9 @@ body .mm_btn i {
 /* HEADER */
 .mm_header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #530685;
 }
 .mm_header_content {

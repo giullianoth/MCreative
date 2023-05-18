@@ -2,6 +2,7 @@
 @include theme() {
     &_header {
         @include fullWidthContainer;
+        @include fixed;
         background-color: $color-indigo;
 
         &_content {
