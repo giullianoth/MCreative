@@ -3,11 +3,11 @@
     &_header {
         @include fullWidthContainer;
         background-color: $color-indigo;
-        padding: 10px 0;
 
         &_content {
-            @include maxWidthContainer;
+            @include maxWidthContainer($container-max-width-default, 10px);
             @include flex(space-between, center, nowrap);
+            @include relative;
 
             &_logo {
                 &_title {
@@ -22,19 +22,74 @@
             }
 
             &_nav {
+                &_icon {
+                    color: $color-white;
+                    font-size: $font-size-big;
+                    cursor: pointer;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        display: none;
+                    }
+                }
+
                 &_menu {
-                    @include flex;
-                    column-gap: 30px;
+                    @include absolute(100%, unset);
+                    right: 0;
+
+                    @include fullWidthContainer;
+                    @include maxWidthContainer($breakpoint-mobile, 0, 0);
+                    background-color: $color-white;
+
+                    display: none;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        @include flex;
+                        column-gap: 20px;
+                        position: static;
+                        background: none;
+                        width: auto;
+                        max-width: unset;
+                    }
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        column-gap: 30px;
+                    }
 
                     &_item {
                         a {
-                            color: $color-white;
+                            color: $color-onyx;
+                            padding: 10px 20px;
+                            display: block;
+
+                            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                                padding: 0;
+                                color: $color-white;
+                                font-size: $font-size-small;
+                            }
+
+                            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                                font-size: $font-size-default;
+                            }
 
                             &:hover {
-                                color: $color-lavender-pink;
+                                background-color: $color-indigo;
+                                color: $color-white;
+
+                                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                                    background: none;
+                                    color: $color-lavender-pink;
+                                }
                             }
                         }
                     }
+                }
+            }
+
+            &_budget {
+                display: none;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    display: block;
                 }
             }
         }

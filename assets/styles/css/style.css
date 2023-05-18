@@ -92,16 +92,16 @@ body .mm_btn i {
 .mm_header {
   width: 100%;
   background-color: #530685;
-  padding: 10px 0;
 }
 .mm_header_content {
   max-width: 1140px;
-  padding: 0 20px;
+  padding: 10px 20px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  position: relative;
 }
 .mm_header_content_logo_title {
   display: none;
@@ -109,16 +109,78 @@ body .mm_btn i {
 .mm_header_content_logo_image img {
   width: 210px;
 }
+.mm_header_content_nav_icon {
+  color: #FFF;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 899px) {
+  .mm_header_content_nav_icon {
+    display: none;
+  }
+}
 .mm_header_content_nav_menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  column-gap: 30px;
+  position: absolute;
+  top: 100%;
+  left: unset;
+  right: 0;
+  width: 100%;
+  max-width: 480px;
+  padding: 0 0;
+  margin: 0 auto;
+  background-color: #FFF;
+  display: none;
+}
+@media screen and (min-width: 899px) {
+  .mm_header_content_nav_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    position: static;
+    background: none;
+    width: auto;
+    max-width: unset;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mm_header_content_nav_menu {
+    column-gap: 30px;
+  }
 }
 .mm_header_content_nav_menu_item a {
-  color: #FFF;
+  color: #3C3F42;
+  padding: 10px 20px;
+  display: block;
+}
+@media screen and (min-width: 899px) {
+  .mm_header_content_nav_menu_item a {
+    padding: 0;
+    color: #FFF;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mm_header_content_nav_menu_item a {
+    font-size: 1rem;
+  }
 }
 .mm_header_content_nav_menu_item a:hover {
-  color: #E3A2CC;
+  background-color: #530685;
+  color: #FFF;
+}
+@media screen and (min-width: 899px) {
+  .mm_header_content_nav_menu_item a:hover {
+    background: none;
+    color: #E3A2CC;
+  }
+}
+.mm_header_content_budget {
+  display: none;
+}
+@media screen and (min-width: 899px) {
+  .mm_header_content_budget {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
