@@ -206,6 +206,55 @@ body .mm_btn i {
   }
 }
 
+.mm_headline {
+  width: 100%;
+  background-image: url("../../images/mcreative-bannner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 650px;
+  margin-top: 100px;
+}
+.mm_headline_content {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 650px;
+}
+.mm_headline_content_info {
+  flex-basis: 52%;
+}
+.mm_headline_content_info_title {
+  margin-bottom: 20px;
+}
+.mm_headline_content_info_title h1 {
+  color: #FFF;
+  font-size: 3.36rem;
+  font-weight: 900;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.mm_headline_content_info_subtitle {
+  color: #FFF;
+  font-size: 1.56rem;
+  margin-bottom: 20px;
+}
+.mm_headline_content_info_cta {
+  font-size: 1.2rem;
+}
+.mm_headline_content_image {
+  flex-basis: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  min-height: 650px;
+}
+
 /* FOOTER */
 .mm_footer {
   width: 100%;

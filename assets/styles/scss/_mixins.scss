@@ -143,6 +143,17 @@
     left: $left;
 }
 
+// BACKGROUND IMAGE
+@mixin backgroundImage($image: "", $repeat: no-repeat, $size: cover, $position: center center) {
+    @if $image != "" {
+        background-image: url($image);
+    }
+
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position: $position;
+}
+
 // TRANSITIONS AND ANIMATIONS
 @mixin transition($property: all, $duration: $transition-duration-default, $timingFunction: ease, $delay: 0s) {
     transition: $property $duration $timingFunction $delay;

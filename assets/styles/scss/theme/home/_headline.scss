@@ -1,0 +1,47 @@
+@include theme() {
+    &_headline {
+        @include fullWidthContainer;
+        @include backgroundImage("../../images/mcreative-bannner.png");
+        min-height: 650px;
+
+        margin-top: 100px;
+
+        &_content {
+            @include maxWidthContainer;
+            @include flex;
+            min-height: 650px;
+
+            &_info {
+                @include flexBasis(52%);
+
+                &_title {
+                    margin-bottom: 20px;
+
+                    h1 {
+                        color: $color-white;
+                        font-size: calc($font-size-big * 2.8);
+                        font-weight: 900;
+                        line-height: 1em;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &_subtitle {
+                    color: $color-white;
+                    font-size: calc($font-size-big * 1.3);
+                    margin-bottom: 20px;
+                }
+
+                &_cta {
+                    font-size: $font-size-big;
+                }
+            }
+
+            &_image {
+                @include flexBasis(48%);
+                @include flex(center, flex-end);
+                min-height: 650px;
+            }
+        }
+    }
+}
