@@ -111,8 +111,22 @@ body .mm_btn i {
 }
 .mm_header_content_nav_icon {
   color: #FFF;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   cursor: pointer;
+  display: block;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  transition: all 0.3s ease 0s;
+}
+.mm_header_content_nav_icon:hover {
+  background-color: rgba(255, 255, 255, 0.2509803922);
 }
 @media screen and (min-width: 899px) {
   .mm_header_content_nav_icon {
@@ -137,6 +151,7 @@ body .mm_btn i {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    display: flex !important;
     column-gap: 20px;
     position: static;
     background: none;

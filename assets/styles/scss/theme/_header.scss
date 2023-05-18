@@ -24,8 +24,19 @@
             &_nav {
                 &_icon {
                     color: $color-white;
-                    font-size: $font-size-big;
+                    font-size: calc($font-size-big * 1.2);
                     cursor: pointer;
+                    display: block;
+
+                    width: 34px;
+                    height: 34px;
+                    @include flex;
+                    @include borderRadius(5px);
+                    @include transition;
+
+                    &:hover {
+                        background-color: $color-white-alpha;
+                    }
 
                     @include setResponsiveDesign($breakpoint-tablet-landscape) {
                         display: none;
@@ -44,6 +55,7 @@
 
                     @include setResponsiveDesign($breakpoint-tablet-landscape) {
                         @include flex;
+                        display: flex !important;
                         column-gap: 20px;
                         position: static;
                         background: none;
