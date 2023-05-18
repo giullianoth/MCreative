@@ -22,6 +22,9 @@ const transitionGap = 10;
 const mobileMenu = getElement(".j_mobile_menu");
 const mobileMenuIcon = getElement(".j_mobile_menu_icon");
 
+// COPYRIGHT
+const copyrightYear = getElement(".j_copy_year");
+
 export {
     getElement, getElements,
     setStyle, addClass, removeClass, toggleClass, replaceClass, elementContainsClass, computedStyle, isVisible,
@@ -29,4 +32,6 @@ export {
     transitionDuration, transitionGap,
 
     mobileMenu, mobileMenuIcon,
+
+    copyrightYear,
 }
