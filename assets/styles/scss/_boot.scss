@@ -64,6 +64,10 @@ body {
             @include borderRadius($radius-big);
             @include transition;
 
+            &:hover {
+                transform: scale(1.1);
+            }
+
             i {
                 vertical-align: middle;
                 margin-left: 6px;

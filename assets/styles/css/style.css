@@ -83,6 +83,9 @@ body .mm_btn {
   -webkit-border-radius: 30px;
   transition: all 0.3s ease 0s;
 }
+body .mm_btn:hover {
+  transform: scale(1.1);
+}
 body .mm_btn i {
   vertical-align: middle;
   margin-left: 6px;
