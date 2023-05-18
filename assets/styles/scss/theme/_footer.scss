@@ -9,16 +9,34 @@
             @include fullWidthContainer;
             background-color: $color-indigo;
 
-            &_content {
-                @include maxWidthContainer($container-max-width-default, 50px);
+            &_content {                
+                @include maxWidthContainer($breakpoint-mobile, 50px);
                 @include flex(center, flex-start);
-                column-gap: 50px;
+                gap: 50px;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    max-width: $container-max-width-default;
+                    column-gap: 20px;
+                }
+
+                @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                    column-gap: 50px;
+                }
 
                 &_item {
-                    @include flex4(50px);
+                    @include flex1;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        @include flex4(20px);
+                    }
+
+                    @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                        @include flex4(50px);
+                    }
 
                     h2 {
                         font-family: $font-montserrat;
+                        font-weight: 600;
                         color: $color-white;
 
                         &:not(.headline_title) {
@@ -47,7 +65,14 @@
                 .headline {
                     &_logo {
                         display: block;
-                        margin-bottom: 20px;
+                        width: 210px;
+
+                        margin: {
+                            top: 0;
+                            right: auto;
+                            bottom: 20px;
+                            left: auto;
+                        }
                     }
 
                     &_title {
@@ -60,7 +85,7 @@
                 .social {
                     &_networks {
                         @include flex(flex-start);
-                        column-gap: 20px;
+                        column-gap: 10px;
 
                         &_item {
                             i {
@@ -91,9 +116,20 @@
             &_content {
                 @include maxWidthContainer($container-max-width-default, 10px);
                 @include flex(space-between);
+                row-gap: 10px;
+
                 color: $color-white;
                 font-size: $font-size-small;
                 font-weight: 400;
+
+                p {
+                    text-align: center;
+                    @include flex1;
+
+                    @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                        @include flexBasis(unset);
+                    }
+                }
             }
         }
     }
