@@ -204,4 +204,93 @@ body .mm_btn i {
   .mm_header_content_budget {
     display: block;
   }
+}
+
+/* FOOTER */
+.mm_footer {
+  width: 100%;
+  margin-top: 100px;
+}
+.mm_footer_nav {
+  width: 100%;
+  background-color: #530685;
+}
+.mm_footer_nav_content {
+  max-width: 1140px;
+  padding: 50px 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 50px;
+}
+.mm_footer_nav_content_item {
+  flex-basis: calc(25% - 50px);
+}
+.mm_footer_nav_content_item h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #FFF;
+}
+.mm_footer_nav_content_item h2:not(.headline_title) {
+  margin-bottom: 20px;
+}
+.mm_footer_nav_content_item ul li a, .mm_footer_nav_content_item ul li i {
+  color: #FFF;
+}
+.mm_footer_nav_content_item ul li:not(.social_networks_item) {
+  padding: 6px 0;
+  font-weight: 400;
+}
+.mm_footer_nav_content_item ul li:not(.social_networks_item) i {
+  margin-right: 6px;
+}
+.mm_footer_nav_content .headline_logo {
+  display: block;
+  margin-bottom: 20px;
+}
+.mm_footer_nav_content .headline_title {
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+}
+.mm_footer_nav_content .social_networks {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+.mm_footer_nav_content .social_networks_item i {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  background-color: #FF1090;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease 0s;
+}
+.mm_footer_nav_content .social_networks_item i:hover {
+  transform: scale(1.1);
+}
+.mm_footer_rights {
+  width: 100%;
+  background-color: #73038B;
+}
+.mm_footer_rights_content {
+  max-width: 1140px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #FFF;
+  font-size: 0.8rem;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

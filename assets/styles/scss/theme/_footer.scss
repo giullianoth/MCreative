@@ -1,0 +1,100 @@
+/* FOOTER */
+@include theme() {
+    &_footer {
+        @include fullWidthContainer;
+
+        margin-top: 100px;
+
+        &_nav {
+            @include fullWidthContainer;
+            background-color: $color-indigo;
+
+            &_content {
+                @include maxWidthContainer($container-max-width-default, 50px);
+                @include flex(center, flex-start);
+                column-gap: 50px;
+
+                &_item {
+                    @include flex4(50px);
+
+                    h2 {
+                        font-family: $font-montserrat;
+                        color: $color-white;
+
+                        &:not(.headline_title) {
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            a, i {
+                                color: $color-white;
+                            }
+
+                            &:not(.social_networks_item) {
+                                padding: 6px 0;
+                                font-weight: 400;
+
+                                i {
+                                    margin-right: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .headline {
+                    &_logo {
+                        display: block;
+                        margin-bottom: 20px;
+                    }
+
+                    &_title {
+                        font-weight: 500;
+                        font-size: $font-size-default;
+                        text-align: center;
+                    }
+                }
+
+                .social {
+                    &_networks {
+                        @include flex(flex-start);
+                        column-gap: 20px;
+
+                        &_item {
+                            i {
+                                width: 40px;
+                                height: 40px;
+                                font-size: calc($font-size-big);
+
+                                background-color: $color-magenta;
+
+                                @include rounded;
+                                @include flex;
+                                @include transition;
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &_rights {
+            @include fullWidthContainer;
+            background-color: $color-purple;
+
+            &_content {
+                @include maxWidthContainer($container-max-width-default, 10px);
+                @include flex(space-between);
+                color: $color-white;
+                font-size: $font-size-small;
+                font-weight: 400;
+            }
+        }
+    }
+}

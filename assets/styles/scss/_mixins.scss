@@ -85,6 +85,10 @@
     @include setBrowserCores(border-radius, $radius);
 }
 
+@mixin rounded() {
+    @include borderRadius(50%);
+}
+
 // FLEXBOX
 @mixin flex($justifyContent: center, $alignitems: center, $flexWrap: wrap) {
     display: flex;
