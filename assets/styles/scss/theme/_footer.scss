@@ -41,6 +41,11 @@
 
                         &:not(.headline_title) {
                             margin-bottom: 20px;
+                            text-align: center;
+
+                            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                                text-align: left;
+                            }
                         }
                     }
 
@@ -53,6 +58,11 @@
                             &:not(.social_networks_item) {
                                 padding: 6px 0;
                                 font-weight: 400;
+                                text-align: center;
+
+                                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                                    text-align: left;
+                                }
 
                                 i {
                                     margin-right: 6px;
@@ -84,8 +94,12 @@
 
                 .social {
                     &_networks {
-                        @include flex(flex-start);
+                        @include flex;
                         column-gap: 10px;
+
+                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                            justify-content: flex-start;
+                        }
 
                         &_item {
                             i {
