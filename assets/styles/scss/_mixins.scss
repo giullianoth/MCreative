@@ -90,10 +90,10 @@
 }
 
 // FLEXBOX
-@mixin flex($justifyContent: center, $alignitems: center, $flexWrap: wrap) {
+@mixin flex($justifyContent: center, $alignItems: center, $flexWrap: wrap) {
     display: flex;
     justify-content: $justifyContent;
-    align-items: $alignitems;
+    align-items: $alignItems;
     flex-wrap: $flexWrap;
 }
 

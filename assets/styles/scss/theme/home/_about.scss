@@ -1,0 +1,46 @@
+/* ABOUT SECTION */
+@include theme() {
+    &_about {
+        @include fullWidthContainer;
+        margin: 60px 0;
+
+        &_content {
+            @include maxWidthContainer;
+            @include flex;
+            gap: 40px;
+
+            &_info {
+                @include flexBasis(52%, 40px);
+
+                &_title {
+                    margin-bottom: 20px;
+
+                    h1 {
+                        font-size: calc($font-size-big * 2.6);
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        line-height: 1.2em;
+
+                        span {
+                            display: block;
+                            font-family: $font-montserrat;
+                            font-weight: 600;
+                            font-size: $font-size-big;
+                        }
+                    }
+                }
+
+                &_text {
+                    p {
+                        margin: 12px 0;
+                        line-height: 1.4em;
+                    }
+                }
+            }
+
+            &_image {
+                @include flexBasis(48%, 40px);
+            }
+        }
+    }
+}
