@@ -7,22 +7,44 @@
         margin-top: 100px;
 
         &_content {
-            @include maxWidthContainer;
-            @include flex;
+            @include flex(center, flex-end);
+            row-gap: 40px;
             min-height: 650px;
+            
+            @include maxWidthContainer($breakpoint-mobile-landscape);
+            padding-top: 120px;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {                
+                @include maxWidthContainer;
+                align-items: center;
+            }
 
             &_info {
-                @include flexBasis(52%);
+                @include flex1;
+                text-align: center;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    @include flexBasis(52%);
+                    text-align: left;
+                }
 
                 &_title {
                     margin-bottom: 20px;
 
                     h1 {
                         color: $color-white;
-                        font-size: calc($font-size-big * 2.8);
+                        font-size: calc($font-size-big * 2);
                         font-weight: 900;
                         line-height: 1em;
                         text-transform: uppercase;
+
+                        @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                            font-size: calc($font-size-big * 2.4);
+                        }
+
+                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                            font-size: calc($font-size-big * 2.8);
+                        }
                     }
                 }
 
@@ -33,14 +55,20 @@
                 }
 
                 &_cta {
-                    font-size: $font-size-big;
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        font-size: $font-size-big;
+                    }
                 }
             }
 
             &_image {
-                @include flexBasis(48%);
+                @include flex1;
                 @include flex(center, flex-end);
-                min-height: 650px;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    @include flexBasis(48%);
+                    min-height: 650px;
+                }
             }
         }
     }
