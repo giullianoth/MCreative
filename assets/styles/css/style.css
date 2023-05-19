@@ -206,6 +206,7 @@ body .mm_btn i {
   }
 }
 
+/* HEADLINE */
 .mm_headline {
   width: 100%;
   background-image: url("../../images/mcreative-bannner.png");
@@ -237,11 +238,13 @@ body .mm_btn i {
 .mm_headline_content_info {
   flex-basis: 100%;
   text-align: center;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 899px) {
   .mm_headline_content_info {
     flex-basis: 52%;
     text-align: left;
+    margin-bottom: 0;
   }
 }
 .mm_headline_content_info_title {
@@ -286,6 +289,47 @@ body .mm_btn i {
     flex-basis: 48%;
     min-height: 650px;
   }
+}
+
+/* SERVICES */
+.mm_services {
+  width: 100%;
+  margin-top: -80px;
+}
+.mm_services_content {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.mm_services_content_service {
+  flex-basis: calc(25% - 10px);
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 5px 0px rgba(82, 6, 133, 0.2);
+  border-bottom: 3px solid #FF1090;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.mm_services_content_service_image {
+  margin-bottom: 10px;
+}
+.mm_services_content_service_image img {
+  height: 60px;
+}
+.mm_services_content_service_title {
+  margin-bottom: 10px;
+}
+.mm_services_content_service_title h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 /* FOOTER */
@@ -428,4 +472,4 @@ body .mm_btn i {
   .mm_footer_rights_content p {
     flex-basis: unset;
   }
-}
+}/*# sourceMappingURL=style.css.map */

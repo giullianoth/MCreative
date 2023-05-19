@@ -1,0 +1,43 @@
+/* SERVICES */
+@include theme() {
+    &_services {
+        @include fullWidthContainer;
+        margin-top: -80px;
+
+        &_content {
+            @include maxWidthContainer;
+            @include flex;
+            gap: 10px;
+
+            &_service {
+                @include flex4(10px);
+                text-align: center;
+
+                padding: 30px 20px;
+                background-color: $color-white;
+                box-shadow: 0px 0px 5px 0px $color-indigo-shadow;
+                border-bottom: 3px solid $color-magenta;
+
+                @include borderRadius;
+
+                &_image {
+                    margin-bottom: 10px;
+
+                    img {
+                        height: 60px;
+                    }
+                }
+
+                &_title {
+                    margin-bottom: 10px;
+
+                    h1 {
+                        font-family: $font-montserrat;
+                        font-size: $font-size-default;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

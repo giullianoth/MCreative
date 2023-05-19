@@ -1,3 +1,4 @@
+/* HEADLINE */
 @include theme() {
     &_headline {
         @include fullWidthContainer;
@@ -20,10 +21,12 @@
             &_info {
                 @include flex1;
                 text-align: center;
+                margin-bottom: 30px;
 
                 @include setResponsiveDesign($breakpoint-tablet-landscape) {
                     @include flexBasis(52%);
                     text-align: left;
+                    margin-bottom: 0;
                 }
 
                 &_title {
