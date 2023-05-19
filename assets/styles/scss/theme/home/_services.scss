@@ -2,15 +2,23 @@
 @include theme() {
     &_services {
         @include fullWidthContainer;
-        margin-top: -80px;
+        margin-top: -30px;
+
+        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+            margin-top: -80px;
+        }
 
         &_content {
-            @include maxWidthContainer;
+            @include maxWidthContainer($breakpoint-mobile);
             @include flex;
             gap: 10px;
 
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                @include maxWidthContainer;
+            }
+
             &_service {
-                @include flex4(10px);
+                @include flex1;
                 text-align: center;
 
                 padding: 30px 20px;
@@ -19,6 +27,10 @@
                 border-bottom: 3px solid $color-magenta;
 
                 @include borderRadius;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    @include flex4(10px);
+                }
 
                 &_image {
                     margin-bottom: 10px;
