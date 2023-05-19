@@ -4,8 +4,6 @@
         @include backgroundImage("../../images/mcreative-bannner.png");
         min-height: 650px;
 
-        margin-top: 100px;
-
         &_content {
             @include flex(center, flex-end);
             row-gap: 40px;

@@ -18,6 +18,10 @@ const isVisible = (element) => computedStyle(element, "display") !== "none";
 const transitionDuration = 300;
 const transitionGap = 10;
 
+// HEADER/HEADLINE
+const header = getElement(".j_header");
+const headline = getElement(".j_headline");
+
 // MOBILE MENU
 const mobileMenu = getElement(".j_mobile_menu");
 const mobileMenuIcon = getElement(".j_mobile_menu_icon");
@@ -30,6 +34,8 @@ export {
     setStyle, addClass, removeClass, toggleClass, replaceClass, elementContainsClass, computedStyle, isVisible,
 
     transitionDuration, transitionGap,
+
+    header, headline,
 
     mobileMenu, mobileMenuIcon,
 
