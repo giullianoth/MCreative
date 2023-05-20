@@ -1,0 +1,89 @@
+/* PORTFOLIO SECTION */
+@include theme() {
+    &_portfolio {
+        @include fullWidthContainer;
+        margin: 60px 0;
+
+        &_content {
+            @include maxWidthContainer;
+
+            &_title {
+                text-align: center;
+
+                h1 {
+                    margin-bottom: 20px;
+                    font-size: calc($font-size-big * 2.6);
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    margin-bottom: 20px;
+                    font-size: $font-size-big;
+                    color: $color-onyx;
+                }
+            }
+
+            &_nav {
+                margin-bottom: 20px;
+
+                &_btns {
+                    @include flex;
+                    gap: 10px;
+
+                    &_btn {
+                        button {
+                            background-color: $color-anti-flash-white;
+                            color: $color-onyx;
+                            padding: 15px 35px;
+                            font-weight: 500;
+
+                            &:hover, &.active {
+                                transform: none;
+                                background-color: $color-magenta;
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &_gallery {
+                @include flex(flex-start);
+                gap: 20px;
+
+                &_item {
+                    @include flex3(20px);
+                    padding: 20px;
+                    height: 300px;
+
+                    box-shadow: 0px 8px 20px 0px $color-black-shadow;
+                    @include borderRadius;
+
+                    cursor: pointer;
+
+                    &:hover &_image {
+                        background-position: bottom center;
+                    }
+
+                    &_image {
+                        height: 100%;
+                        @include backgroundImage("", no-repeat, cover, top center);
+                        @include transition(background-position, 2s);
+
+                        @include flex(center, flex-end);
+
+                        a {
+                            text-transform: uppercase;
+                            margin-bottom: 10px;
+
+                            &:hover {
+                                transform: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
