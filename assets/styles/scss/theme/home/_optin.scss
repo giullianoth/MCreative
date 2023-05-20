@@ -1,0 +1,37 @@
+/* OPTIN SECTION */
+@include theme() {
+    &_optin {
+        @include fullWidthContainer;
+        @include backgroundImage("../../images/mcreative-bannner.png");
+        background-attachment: fixed;
+        padding: 20px 0;
+
+        &_content {
+            @include maxWidthContainer;
+            @include flex;
+            gap: 20px;
+
+            &_text {
+                @include flex1;
+                color: $color-white;
+                text-align: center;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {                    
+                    @include flexBasis(70%, 20px);
+                    font-size: $font-size-big;
+                    text-align: left;
+                }
+            }
+
+            &_cta {
+                @include flex1;
+                text-align: center;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {                    
+                    @include flexBasis(30%, 20px);
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
