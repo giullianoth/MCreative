@@ -10,16 +10,24 @@
             gap: 40px;
 
             &_info {
-                @include flexBasis(52%, 40px);
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    @include flexBasis(52%, 40px);
+                }
 
                 &_title {
                     margin-bottom: 20px;
 
                     h1 {
-                        font-size: calc($font-size-big * 2.6);
+                        font-size: calc($font-size-big * 2);
                         font-weight: 900;
                         text-transform: uppercase;
                         line-height: 1.2em;
+
+                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                            font-size: calc($font-size-big * 2.6);
+                        }
 
                         span {
                             display: block;
@@ -39,7 +47,13 @@
             }
 
             &_image {
-                @include flexBasis(48%, 40px);
+                @include flex1;
+                @include maxWidthContainer($breakpoint-mobile-landscape, 0, 0);
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    @include flexBasis(48%, 40px);
+                    max-width: auto;
+                }
             }
         }
     }
