@@ -5,11 +5,14 @@
     @include setBrowserCores(box-sizing, border-box);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $font-montserrat;
     font-weight: 500;
     color: $color-gray;
-    scroll-behavior: smooth;
 
     h1, h2, h3, h4, h5, h6 {
         color: $color-indigo;

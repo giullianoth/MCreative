@@ -33,11 +33,14 @@
   -webkit-box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #7A7A7A;
-  scroll-behavior: smooth;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   color: #530685;
