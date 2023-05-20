@@ -472,9 +472,10 @@ body .mm_btn i {
 }
 .mm_portfolio_content_title h1 {
   margin-bottom: 20px;
-  font-size: 3.12rem;
+  font-size: 2.4rem;
   font-weight: 900;
   text-transform: uppercase;
+  line-height: 1.2em;
 }
 .mm_portfolio_content_title p {
   margin-bottom: 20px;
@@ -482,20 +483,46 @@ body .mm_btn i {
   color: #3C3F42;
 }
 .mm_portfolio_content_nav {
+  max-width: 480px;
+  padding: 0 0;
+  margin: 0 auto;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 899px) {
+  .mm_portfolio_content_nav {
+    max-width: 1140px;
+    padding: 0 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 .mm_portfolio_content_nav_btns {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
+}
+@media screen and (min-width: 899px) {
+  .mm_portfolio_content_nav_btns {
+    flex-direction: row;
+  }
+}
+.mm_portfolio_content_nav_btns_btn {
+  width: 100%;
+}
+@media screen and (min-width: 899px) {
+  .mm_portfolio_content_nav_btns_btn {
+    width: auto;
+  }
 }
 .mm_portfolio_content_nav_btns_btn button {
   background-color: #F1F2F3;
   color: #3C3F42;
   padding: 15px 35px;
   font-weight: 500;
+  width: 100%;
 }
 .mm_portfolio_content_nav_btns_btn button:hover, .mm_portfolio_content_nav_btns_btn button.active {
   transform: none;
@@ -508,9 +535,26 @@ body .mm_btn i {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 480px;
+  padding: 0 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 767px) {
+  .mm_portfolio_content_gallery {
+    max-width: 768px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mm_portfolio_content_gallery {
+    max-width: 1140px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
 }
 .mm_portfolio_content_gallery_item {
-  flex-basis: calc(33.3333333333% - 20px);
+  flex-basis: 100%;
   padding: 20px;
   height: 300px;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.1019607843);
@@ -518,6 +562,16 @@ body .mm_btn i {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   cursor: pointer;
+}
+@media screen and (min-width: 767px) {
+  .mm_portfolio_content_gallery_item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mm_portfolio_content_gallery_item {
+    flex-basis: calc(33.3333333333% - 20px);
+  }
 }
 .mm_portfolio_content_gallery_item:hover .mm_portfolio_content_gallery_item_image {
   background-position: bottom center;

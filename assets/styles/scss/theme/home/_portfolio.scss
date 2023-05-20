@@ -12,9 +12,12 @@
 
                 h1 {
                     margin-bottom: 20px;
-                    font-size: calc($font-size-big * 2.6);
+                    font-size: calc($font-size-big * 2);
+                    // font-size: calc($font-size-big * 2.6);
+
                     font-weight: 900;
                     text-transform: uppercase;
+                    line-height: 1.2em;
                 }
 
                 p {
@@ -25,18 +28,36 @@
             }
 
             &_nav {
+                @include maxWidthContainer($breakpoint-mobile, 0, 0);
                 margin-bottom: 20px;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    @include maxWidthContainer($container-max-width-default, 0, 0);
+                    margin-bottom: 20px;
+                }
 
                 &_btns {
                     @include flex;
+                    flex-direction: column;
                     gap: 10px;
 
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        flex-direction: row;
+                    }
+
                     &_btn {
+                        width: 100%;
+
+                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                            width: auto;
+                        }
+
                         button {
                             background-color: $color-anti-flash-white;
                             color: $color-onyx;
                             padding: 15px 35px;
                             font-weight: 500;
+                            width: 100%;
 
                             &:hover, &.active {
                                 transform: none;
@@ -51,9 +72,19 @@
             &_gallery {
                 @include flex(flex-start);
                 gap: 20px;
+                
+                @include maxWidthContainer($breakpoint-mobile, 0, 0);
+
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    @include maxWidthContainer($breakpoint-tablet, 0, 0);
+                }
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    @include maxWidthContainer($container-max-width-default, 0, 0);
+                }
 
                 &_item {
-                    @include flex3(20px);
+                    @include flex1;
                     padding: 20px;
                     height: 300px;
 
@@ -61,6 +92,14 @@
                     @include borderRadius;
 
                     cursor: pointer;
+
+                    @include setResponsiveDesign($breakpoint-tablet) {
+                        @include flex2(20px);
+                    }
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        @include flex3(20px);
+                    }
 
                     &:hover &_image {
                         background-position: bottom center;
