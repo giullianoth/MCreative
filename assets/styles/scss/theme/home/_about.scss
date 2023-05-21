@@ -18,12 +18,6 @@
 
                 &_title {
                     margin-bottom: 20px;
-
-                    h1 {
-                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
-                            font-size: calc($font-size-big * 2.6);
-                        }
-                    }
                 }
 
                 &_text {

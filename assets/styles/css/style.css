@@ -461,11 +461,6 @@ body .mm_social_networks_item i:hover {
 .mm_about_content_info_title {
   margin-bottom: 20px;
 }
-@media screen and (min-width: 899px) {
-  .mm_about_content_info_title h1 {
-    font-size: 3.12rem;
-  }
-}
 .mm_about_content_info_text p {
   margin: 12px 0;
   line-height: 1.4em;
