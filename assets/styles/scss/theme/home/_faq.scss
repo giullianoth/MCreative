@@ -32,7 +32,8 @@
                     &_question {
                         padding: 10px 22px;
 
-                        @include flex(space-between);
+                        @include flex(space-between, center, nowrap);
+                        column-gap: 10px;
                         @include borderRadius($radius-big);
                         @include relative;
 

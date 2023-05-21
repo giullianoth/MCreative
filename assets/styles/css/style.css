@@ -698,7 +698,8 @@ body .mm_card_title h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  column-gap: 10px;
   border-radius: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
