@@ -7,9 +7,14 @@
         &_content {
             @include maxWidthContainer;
             @include flex;
+            row-gap: 20px;
 
             &_info {
-                @include flex2;
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    @include flex2;
+                }
 
                 h2 {
                     margin-bottom: 20px;
@@ -33,22 +38,35 @@
 
                 &_text {
                     margin-bottom: 20px;
-                    width: 86%;
                     font-size: $font-size-big;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        width: 86%;
+                    }
                 }
 
                 &_contacts {
                     margin-bottom: 20px;
                 }
+
+                &_social {
+                    .mm_social_networks {
+                        justify-content: flex-start;
+                    }
+                }
             }
 
             &_contactform {
-                @include flex2;
+                @include flex1;
                 padding: 20px;
                 background-color: $color-white;
                 box-shadow: 0px 8px 20px 0px $color-black-shadow;
 
                 @include borderRadius;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    @include flex2;
+                }
 
                 &_title {
                     margin-bottom: 20px;
@@ -85,7 +103,11 @@
                     }
 
                     &_2cols {
-                        @include flex2(10px);
+                        @include flex1;
+
+                        @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                            @include flex2(10px);
+                        }
                     }
                 }
             }
