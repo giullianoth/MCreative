@@ -581,7 +581,7 @@ body .mm_btn i {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  transition: background-position 2s ease 0s;
+  transition: background-position 3s ease 0s;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -590,6 +590,7 @@ body .mm_btn i {
 .mm_portfolio_content_gallery_item_image a {
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-size: 0.8rem;
 }
 .mm_portfolio_content_gallery_item_image a:hover {
   transform: none;

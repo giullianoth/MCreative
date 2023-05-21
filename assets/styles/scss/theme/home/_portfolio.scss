@@ -108,13 +108,14 @@
                     &_image {
                         height: 100%;
                         @include backgroundImage("", no-repeat, cover, top center);
-                        @include transition(background-position, 2s);
+                        @include transition(background-position, 3s);
 
                         @include flex(center, flex-end);
 
                         a {
                             text-transform: uppercase;
                             margin-bottom: 10px;
+                            font-size: $font-size-small;
 
                             &:hover {
                                 transform: none;

@@ -13,6 +13,13 @@ const elementContainsClass = (element, className) => element.classList.contains(
 const computedStyle = (element, attr) => window.getComputedStyle(element)[attr];
 
 const isVisible = (element) => computedStyle(element, "display") !== "none";
+const isActive = (element) => elementContainsClass(element, "active");
+
+const normalArray = (arr) => {
+    let list = [];
+    arr.forEach((item) => list.push(item));
+    return list;
+}
 
 // TRANSITIONS AND ANIMATIONS
 const transitionDuration = 300;
@@ -26,18 +33,25 @@ const headline = getElement(".j_headline");
 const mobileMenu = getElement(".j_mobile_menu");
 const mobileMenuIcon = getElement(".j_mobile_menu_icon");
 
+// PORTFOLIO
+const portfolioBtns = getElements(".j_btn_filter");
+const portfolioSites = normalArray(getElements(".j_site"));
+
 // COPYRIGHT
 const copyrightYear = getElement(".j_copy_year");
 
 export {
     getElement, getElements,
-    setStyle, addClass, removeClass, toggleClass, replaceClass, elementContainsClass, computedStyle, isVisible,
+    setStyle, addClass, removeClass, toggleClass, replaceClass, elementContainsClass, computedStyle, isVisible, isActive,
+    normalArray,
 
     transitionDuration, transitionGap,
 
     header, headline,
 
     mobileMenu, mobileMenuIcon,
+
+    portfolioBtns, portfolioSites,
 
     copyrightYear,
 }
