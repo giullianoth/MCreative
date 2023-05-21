@@ -74,6 +74,23 @@ body ul li {
 body img {
   width: 100%;
 }
+body .mm_section_title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2em;
+}
+@media screen and (min-width: 899px) {
+  body .mm_section_title {
+    font-size: 3.12rem;
+  }
+}
+body .mm_section_title .subtitle {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
 body .mm_btn {
   background-color: #FF1090;
   color: #FFF;
@@ -94,6 +111,31 @@ body .mm_btn i {
   vertical-align: middle;
   margin-left: 6px;
 }
+body .mm_card {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 5px 0px rgba(82, 6, 133, 0.2);
+  border-bottom: 3px solid #FF1090;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+body .mm_card_image {
+  margin-bottom: 10px;
+}
+body .mm_card_image img {
+  height: 60px;
+  pointer-events: none;
+}
+body .mm_card_title {
+  margin-bottom: 10px;
+}
+body .mm_card_title h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
 
 /* HEADER */
 .mm_header {
@@ -102,6 +144,7 @@ body .mm_btn i {
   top: 0;
   left: 0;
   background-color: #530685;
+  z-index: 10;
 }
 .mm_header_content {
   max-width: 1140px;
@@ -324,34 +367,11 @@ body .mm_btn i {
 }
 .mm_services_content_service {
   flex-basis: 100%;
-  text-align: center;
-  padding: 30px 20px;
-  background-color: #FFF;
-  box-shadow: 0px 0px 5px 0px rgba(82, 6, 133, 0.2);
-  border-bottom: 3px solid #FF1090;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
 }
 @media screen and (min-width: 899px) {
   .mm_services_content_service {
     flex-basis: calc(25% - 10px);
   }
-}
-.mm_services_content_service_image {
-  margin-bottom: 10px;
-}
-.mm_services_content_service_image img {
-  height: 60px;
-  pointer-events: none;
-}
-.mm_services_content_service_title {
-  margin-bottom: 10px;
-}
-.mm_services_content_service_title h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
 }
 
 /* ABOUT SECTION */
@@ -380,22 +400,10 @@ body .mm_btn i {
 .mm_about_content_info_title {
   margin-bottom: 20px;
 }
-.mm_about_content_info_title h1 {
-  font-size: 2.4rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 1.2em;
-}
 @media screen and (min-width: 899px) {
   .mm_about_content_info_title h1 {
     font-size: 3.12rem;
   }
-}
-.mm_about_content_info_title h1 span {
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
 }
 .mm_about_content_info_text p {
   margin: 12px 0;
@@ -472,10 +480,6 @@ body .mm_btn i {
 }
 .mm_portfolio_content_title h1 {
   margin-bottom: 20px;
-  font-size: 2.4rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 1.2em;
 }
 .mm_portfolio_content_title p {
   margin-bottom: 20px;
@@ -594,6 +598,67 @@ body .mm_btn i {
 }
 .mm_portfolio_content_gallery_item_image a:hover {
   transform: none;
+}
+
+/* BENEFITS SECTION */
+.mm_benefits {
+  width: 100%;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+.mm_benefits::before {
+  content: "";
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/tecno-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+.mm_benefits_content {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.mm_benefits_content_title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.mm_benefits_content_list {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.mm_benefits_content_list_benefit {
+  flex-basis: 100%;
+  min-height: 200px;
+}
+@media screen and (min-width: 599px) {
+  .mm_benefits_content_list_benefit {
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 767px) {
+  .mm_benefits_content_list_benefit {
+    flex-basis: calc(33.3333333333% - 15px);
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mm_benefits_content_list_benefit {
+    flex-basis: calc(25% - 15px);
+  }
+}
+.mm_benefits_content_cta {
+  text-align: center;
 }
 
 /* FOOTER */

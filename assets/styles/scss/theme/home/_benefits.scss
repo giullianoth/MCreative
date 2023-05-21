@@ -1,0 +1,54 @@
+/* BENEFITS SECTION */
+@include theme() {
+    &_benefits {
+        @include fullWidthContainer;
+        padding: 60px 0;
+
+        @include relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            opacity: 0.3;
+            @include absoluteFull(0, 0, true);
+            @include backgroundImage("../../images/tecno-1.png");
+            z-index: -1;
+        }
+
+        &_content {
+            @include maxWidthContainer;
+
+            &_title {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            &_list {
+                margin-bottom: 20px;
+                @include flex(flex-start);
+                gap: 20px;
+
+                &_benefit {
+                    @include flex1;
+                    min-height: 200px;
+
+                    @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                        @include flex2(10px);
+                    }
+
+                    @include setResponsiveDesign($breakpoint-tablet) {
+                        @include flex3(15px);
+                    }
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        @include flex4(15px);
+                    }
+                }
+            }
+
+            &_cta {
+                text-align: center;
+            }
+        }
+    }
+}

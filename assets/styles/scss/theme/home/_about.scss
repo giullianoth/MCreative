@@ -20,20 +20,8 @@
                     margin-bottom: 20px;
 
                     h1 {
-                        font-size: calc($font-size-big * 2);
-                        font-weight: 900;
-                        text-transform: uppercase;
-                        line-height: 1.2em;
-
                         @include setResponsiveDesign($breakpoint-tablet-landscape) {
                             font-size: calc($font-size-big * 2.6);
-                        }
-
-                        span {
-                            display: block;
-                            font-family: $font-montserrat;
-                            font-weight: 600;
-                            font-size: $font-size-big;
                         }
                     }
                 }

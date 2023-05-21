@@ -4,6 +4,7 @@
         @include fullWidthContainer;
         @include fixed;
         background-color: $color-indigo;
+        z-index: 10;
 
         &_content {
             @include maxWidthContainer($container-max-width-default, 10px);

@@ -55,6 +55,24 @@ body {
     }
 
     @include theme() {
+        &_section_title {
+            font-size: calc($font-size-big * 2);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.2em;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                font-size: calc($font-size-big * 2.6);
+            }
+
+            .subtitle {
+                display: block;
+                font-family: $font-montserrat;
+                font-weight: 600;
+                font-size: $font-size-big;
+            }
+        }
+
         &_btn {
             background-color: $color-magenta;
             color: $color-white;
@@ -76,6 +94,36 @@ body {
                 vertical-align: middle;
                 margin-left: 6px;
             }
+        }
+
+        &_card {
+            text-align: center;
+
+                padding: 30px 20px;
+                background-color: $color-white;
+                box-shadow: 0px 0px 5px 0px $color-indigo-shadow;
+                border-bottom: 3px solid $color-magenta;
+
+                @include borderRadius;
+
+                &_image {
+                    margin-bottom: 10px;
+
+                    img {
+                        height: 60px;
+                        pointer-events: none;
+                    }
+                }
+
+                &_title {
+                    margin-bottom: 10px;
+
+                    h1 {
+                        font-family: $font-montserrat;
+                        font-size: $font-size-default;
+                        font-weight: 600;
+                    }
+                }
         }
     }
 }

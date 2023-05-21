@@ -136,6 +136,11 @@
     left: $left;
 }
 
+@mixin absoluteFull($top: 0, $left: 0, $fillScreen: false) {
+    @include absolute($top, $left);
+    @include fullWidthContainer($fillScreen);
+}
+
 // Fixed
 @mixin fixed($top: 0, $left: 0) {
     position: fixed;
