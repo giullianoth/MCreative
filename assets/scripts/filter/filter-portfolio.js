@@ -15,7 +15,7 @@ export default function FilterPortfolio() {
                 }
             })
 
-            addClass(btn, "active");
+            !isActive(btn) && addClass(btn, "active");
 
             switch (btn.dataset.filter) {
                 case "all":
