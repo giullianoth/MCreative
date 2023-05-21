@@ -3,8 +3,6 @@
     &_footer {
         @include fullWidthContainer;
 
-        margin-top: 40px;
-
         &_nav {
             @include fullWidthContainer;
             background-color: $color-indigo;
@@ -89,35 +87,6 @@
                         font-weight: 500;
                         font-size: $font-size-default;
                         text-align: center;
-                    }
-                }
-
-                .social {
-                    &_networks {
-                        @include flex;
-                        column-gap: 10px;
-
-                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
-                            justify-content: flex-start;
-                        }
-
-                        &_item {
-                            i {
-                                width: 40px;
-                                height: 40px;
-                                font-size: calc($font-size-big);
-
-                                background-color: $color-magenta;
-
-                                @include rounded;
-                                @include flex;
-                                @include transition;
-
-                                &:hover {
-                                    transform: scale(1.1);
-                                }
-                            }
-                        }
                     }
                 }
             }

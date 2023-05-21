@@ -42,15 +42,26 @@ body {
   font-weight: 500;
   color: #7A7A7A;
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   color: #530685;
   font-family: "Brother 1816";
   font-weight: 800;
 }
 body label {
   color: #3C3F42;
+  display: block;
 }
-body input[type=text], body input[type=password], body input[type=email], body textarea {
+body input[type=text],
+body input[type=password],
+body input[type=email],
+body input[type=tel],
+body select,
+body textarea {
   border-radius: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -59,6 +70,8 @@ body input[type=text], body input[type=password], body input[type=email], body t
   font-size: 0.8rem;
   color: #7A7A7A;
   padding: 10px 16px;
+  background-color: #FFF;
+  outline: none;
 }
 body button {
   font-family: "Montserrat", sans-serif;
@@ -135,6 +148,54 @@ body .mm_card_title h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 600;
+}
+body .mm_bg_opacity {
+  position: relative;
+  overflow: hidden;
+}
+body .mm_bg_opacity::before {
+  content: "";
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/tecno-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+body .mm_social_networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 5px;
+}
+@media screen and (min-width: 899px) {
+  body .mm_social_networks {
+    justify-content: flex-start;
+  }
+}
+body .mm_social_networks_item i {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  background-color: #FF1090;
+  color: #FFF;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease 0s;
+}
+body .mm_social_networks_item i:hover {
+  transform: scale(1.1);
 }
 
 /* HEADER */
@@ -604,22 +665,6 @@ body .mm_card_title h1 {
 .mm_benefits {
   width: 100%;
   padding: 60px 0;
-  position: relative;
-  overflow: hidden;
-}
-.mm_benefits::before {
-  content: "";
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../images/tecno-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  z-index: -1;
 }
 .mm_benefits_content {
   max-width: 1140px;
@@ -742,10 +787,94 @@ body .mm_card_title h1 {
   margin-bottom: 10px;
 }
 
+/* CONTACT SECTION */
+.mm_contact {
+  width: 100%;
+  padding: 60px 0;
+}
+.mm_contact_content {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mm_contact_content_info {
+  flex-basis: 50%;
+}
+.mm_contact_content_info h2 {
+  margin-bottom: 20px;
+  color: #3C3F42;
+}
+.mm_contact_content_info i {
+  vertical-align: middle;
+  font-size: 1.2rem;
+  color: #3C3F42;
+  margin-right: 10px;
+}
+.mm_contact_content_info_title {
+  margin-bottom: 20px;
+}
+.mm_contact_content_info_title h1 {
+  text-transform: none;
+}
+.mm_contact_content_info_text {
+  margin-bottom: 20px;
+  width: 86%;
+  font-size: 1.2rem;
+}
+.mm_contact_content_info_contacts {
+  margin-bottom: 20px;
+}
+.mm_contact_content_contactform {
+  flex-basis: 50%;
+  padding: 20px;
+  background-color: #FFF;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.mm_contact_content_contactform_title {
+  margin-bottom: 20px;
+}
+.mm_contact_content_contactform_title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #3C3F42;
+  text-align: center;
+}
+.mm_contact_content_contactform_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.mm_contact_content_contactform_form label {
+  font-size: 0.8rem;
+  color: #7A7A7A;
+  margin-bottom: 10px;
+}
+.mm_contact_content_contactform_form input, .mm_contact_content_contactform_form select, .mm_contact_content_contactform_form textarea, .mm_contact_content_contactform_form button {
+  width: 100%;
+}
+.mm_contact_content_contactform_form textarea {
+  height: 120px;
+}
+.mm_contact_content_contactform_form_1col {
+  flex-basis: 100%;
+}
+.mm_contact_content_contactform_form_2cols {
+  flex-basis: calc(50% - 10px);
+}
+
 /* FOOTER */
 .mm_footer {
   width: 100%;
-  margin-top: 40px;
 }
 .mm_footer_nav {
   width: 100%;
@@ -827,35 +956,6 @@ body .mm_card_title h1 {
   font-weight: 500;
   font-size: 1rem;
   text-align: center;
-}
-.mm_footer_nav_content .social_networks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  column-gap: 10px;
-}
-@media screen and (min-width: 899px) {
-  .mm_footer_nav_content .social_networks {
-    justify-content: flex-start;
-  }
-}
-.mm_footer_nav_content .social_networks_item i {
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  background-color: #FF1090;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  transition: all 0.3s ease 0s;
-}
-.mm_footer_nav_content .social_networks_item i:hover {
-  transform: scale(1.1);
 }
 .mm_footer_rights {
   width: 100%;

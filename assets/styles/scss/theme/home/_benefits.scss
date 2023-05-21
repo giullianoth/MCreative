@@ -4,17 +4,6 @@
         @include fullWidthContainer;
         padding: 60px 0;
 
-        @include relative;
-        overflow: hidden;
-
-        &::before {
-            content: "";
-            opacity: 0.3;
-            @include absoluteFull(0, 0, true);
-            @include backgroundImage("../../images/tecno-1.png");
-            z-index: -1;
-        }
-
         &_content {
             @include maxWidthContainer;
 
