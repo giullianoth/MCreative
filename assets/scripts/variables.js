@@ -37,6 +37,11 @@ const mobileMenuIcon = getElement(".j_mobile_menu_icon");
 const portfolioBtns = getElements(".j_btn_filter");
 const portfolioSites = normalArray(getElements(".j_site"));
 
+// FAQ
+const faqs = getElements(".j_faq");
+const faqQuestion = (faq) => getElement(".j_faq_question", faq);
+const faqAnswer = (faq) => getElement(".j_faq_answer", faq);
+
 // COPYRIGHT
 const copyrightYear = getElement(".j_copy_year");
 
@@ -52,6 +57,8 @@ export {
     mobileMenu, mobileMenuIcon,
 
     portfolioBtns, portfolioSites,
+
+    faqs, faqQuestion, faqAnswer,
 
     copyrightYear,
 }
