@@ -21,6 +21,10 @@ const normalArray = (arr) => {
     return list;
 }
 
+// REGEX
+const onlyNumbers = /^[0-9]+$/;
+const filterPureNumber = (data) => data.split("").filter((char) => char.match(onlyNumbers)).join("");
+
 // TRANSITIONS AND ANIMATIONS
 const transitionDuration = 300;
 const transitionGap = 10;
@@ -42,6 +46,10 @@ const faqs = getElements(".j_faq");
 const faqQuestion = (faq) => getElement(".j_faq_question", faq);
 const faqAnswer = (faq) => getElement(".j_faq_answer", faq);
 
+// PHONE FIELDS
+const phoneFields = () => getElements("input[type=tel]");
+const phoneMaxLength = 15;
+
 // COPYRIGHT
 const copyrightYear = getElement(".j_copy_year");
 
@@ -49,6 +57,8 @@ export {
     getElement, getElements,
     setStyle, addClass, removeClass, toggleClass, replaceClass, elementContainsClass, computedStyle, isVisible, isActive,
     normalArray,
+
+    onlyNumbers, filterPureNumber,
 
     transitionDuration, transitionGap,
 
@@ -59,6 +69,8 @@ export {
     portfolioBtns, portfolioSites,
 
     faqs, faqQuestion, faqAnswer,
+
+    phoneFields, phoneMaxLength,
 
     copyrightYear,
 }

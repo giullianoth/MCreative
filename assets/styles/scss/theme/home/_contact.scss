@@ -98,6 +98,12 @@
                         height: 120px;
                     }
 
+                    button {
+                        &:hover {
+                            transform: none;
+                        }
+                    }
+
                     &_1col {
                         @include flex1;
                     }

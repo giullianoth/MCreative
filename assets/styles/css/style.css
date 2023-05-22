@@ -878,6 +878,9 @@ body .mm_social_networks_item i:hover {
 .mm_contact_content_contactform_form textarea {
   height: 120px;
 }
+.mm_contact_content_contactform_form button:hover {
+  transform: none;
+}
 .mm_contact_content_contactform_form_1col {
   flex-basis: 100%;
 }
