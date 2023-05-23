@@ -8,9 +8,9 @@
 ---
 **Disponível em | _Avaliable in_: Português - BR | _English_**
 
-Este é um projeto de um site fictício de portfólio de web design, chamado MCREATIVE. A construção do layout do site é ensinado pela Micaela do  em seu canal do [YouTube](https://www.youtube.com/@DescomplicandoSites). Enquanto ela ensina a construir utilizando a plataforma Wordpress/Elementor, eu decidi replicar usando HTML, CSS e JavaScript, a fim de tornar o projeto mais desafiador.
+Este é um projeto de um site fictício de portfólio de web design, chamado MCREATIVE. A construção do layout do site é ensinado pela Micaela do [Descomplicando Sites](https://descomplicandosites.com.br/) em seu canal do [YouTube](https://www.youtube.com/@DescomplicandoSites). Enquanto ela ensina a construir utilizando a plataforma Wordpress/Elementor, eu decidi replicar usando HTML, CSS e JavaScript, a fim de tornar o projeto mais desafiador.
 
-*This is a project from a fictitious web design portfolio site called MCREATIVE. The construction of the website layout is taught by Micaela from Descomplicando Sites on her YouTube channel. While she teaches how to build using the Wordpress/Elementor platform, I decided to replicate using HTML, CSS and JavaScript in order to make the project more challenging.*
+*This is a project from a fictitious web design portfolio site called MCREATIVE. The construction of the website layout is taught by Micaela from [Descomplicando Sites](https://descomplicandosites.com.br/) on her [YouTube](https://www.youtube.com/@DescomplicandoSites) channel. While she teaches how to build using the Wordpress/Elementor platform, I decided to replicate using HTML, CSS and JavaScript in order to make the project more challenging.*
 
 ## Conteúdo | Content
 
